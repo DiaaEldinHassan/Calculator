@@ -81,10 +81,17 @@ $(".btns").on("click",function (e) {
     console.log(e.target.name);
     if (e.target.name) {
         if (e.target.name=="+"||e.target.name=="-"||e.target.name=="/"||e.target.name=="*") {
-            arr.push($("button[name="+`\\${e.target.name}`+"]").text());
+            if (e.target.name=="*") {
+                arr.push(e.target.name);
+            }
+            else{
+                arr.push($("button[name="+`\\${e.target.name}`+"]").text());
+            }
             screen=arr.join("");
         } else if(e.target.name!="+"||e.target.name=="-"||e.target.name=="/"||e.target.name=="*"){
-             arr.push($("button[name="+e.target.name+"]").text());
+            
+                arr.push($("button[name="+e.target.name+"]").text());
+        
          console.log("button[name="+e.target.name+"]");
              screen=arr.join("");
         }
