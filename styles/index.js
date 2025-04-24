@@ -1,6 +1,5 @@
 var tog=$(".slide");
 var arr=[];
-var screen="";
 function calc(arr) {
     if (arr.length==0) {
         $(".content").html("<h6>Please Enter Your Calculations</h6>");
@@ -87,13 +86,12 @@ $(".btns").on("click",function (e) {
             else{
                 arr.push($("button[name="+`\\${e.target.name}`+"]").text());
             }
-            screen=arr.join("");
+                    
         } else if(e.target.name!="+"||e.target.name=="-"||e.target.name=="/"||e.target.name=="*"){
             
                 arr.push($("button[name="+e.target.name+"]").text());
         
          console.log("button[name="+e.target.name+"]");
-             screen=arr.join("");
         }
        console.log(arr);
     $(".content").html(arr.join(""));
@@ -117,7 +115,6 @@ $(".btns").on("click",function (e) {
     }
     else if(e.target.value=="=")
     {
-     console.log(screen);
      console.log(eval(arr.join("")));
      $(".content").html(eval(arr.join("")));
      arr=[];
