@@ -30,76 +30,70 @@ body
 /* Themes Selector */
 .mode
 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    place-items: center;
+    text-align: end;
     border-radius: 5px;
     color: hsl(60, 10%, 19%);
     background-color: hsl(0, 0%, 90%);
-     align-content: center;
-     align-self: center;
 }
 
 .cont /* The Themes Selector */
 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto 2.5vw;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    place-items: end;
+    align-self: flex-end;
+    width: 15svh;
+    height: 6svh;
 }
 .mode h6
 {
    margin: 0;
     text-align: center;
    font-weight: bold;
+    font-size: .5rem;
 
 }
-.mode p
-{
-    font-size: 1.5vw;
-  margin: 0;
-    font-weight: bold;
-    text-align: center;
-}
-.mode h3
-{
-    text-align: center;
-    
+.calc p{
+    font-weight: 700;
+    font-size: 15px;
     margin: 0;
-   
+    
 }
-
 input:checked
 {
     background-color: hsl(25, 98%, 40%);
-    margin: 20%;
-
+    margin: 10%;
+    border-radius: 100%;
+    padding: 10%;
 }
 
 
 input
 {
-   
     appearance: none;
-    border-radius: 50%;
     transition: 0.2s all step-start;
-    
-    margin: 0;
-
+   width: 1svh;
+   height: 1svh;
 }
 
 .slider
 {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-direction: row;
     background-color: hsl(0, 5%, 81%);
-    grid-column-start: 1;
-    grid-column-end: 4;
-    height: 40%;
-    width: 45%;
-    padding: 2%;
+    place-items: center;
+    justify-content: space-between;
+    height: 3svh;
+    width: 50%;
+    
     border-radius: 15px;
 }
+
 .nums
 {
     display: grid;
@@ -113,6 +107,24 @@ input
 .theme
 {
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bot{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    justify-content: space-between;
+}
+.bot p
+{
+    align-self: center;
+    font-size: .5rem;
+    font-weight: 700;
 }
 /* screen */
 .scrn
@@ -218,7 +230,7 @@ button[value="reset"]
 {
     .all
     {
-        max-width: 40%;
+        max-width: 50%;
     }
     input:checked
 {
@@ -228,17 +240,6 @@ button[value="reset"]
     padding: 10%;
 }
 
-.nums h6
-{
-    margin-left: 40%;
-    font-size: 7px;
-}
-.slider
-{
-   
-    height: 40%;
-    width: 45%;
-    padding: 5%;
-    border-radius: 15px;
-}
+
+
 }

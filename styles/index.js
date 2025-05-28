@@ -8,7 +8,6 @@ function calc(arr) {
 calc(arr);
 // Background Mode
 tog.on("click",function (e) { 
-console.log(e.target.alt);
 if (e.target.alt==='dark') {
     $("body").css("background-color","hsl(222, 26%, 31%)");
     $(".mode").css("background-color","hsl(222, 26%, 31%");
@@ -77,7 +76,7 @@ else
 
 // Calculator functions
 $(".btns").on("click",function (e) {
-    console.log(e.target.name);
+   
     if (e.target.name) {
         if (e.target.name=="+"||e.target.name=="-"||e.target.name=="/"||e.target.name=="*") {
             if (e.target.name=="*") {
@@ -91,16 +90,14 @@ $(".btns").on("click",function (e) {
             
                 arr.push($("button[name="+e.target.name+"]").text());
         
-         console.log("button[name="+e.target.name+"]");
         }
-       console.log(arr);
+      
     $(".content").html(arr.join(""));
     } 
 })
 $(".btns").on("click",function (e) {
 
     if (e.target.value=="DEL") {
-        console.log(e.target.value=="DEL");
         arr.pop();
         if (arr.length==0) {
             $(".content").html("<h6>Please Enter Your Calculations</h6>");
@@ -115,7 +112,7 @@ $(".btns").on("click",function (e) {
     }
     else if(e.target.value=="=")
     {
-     console.log(eval(arr.join("")));
+     
      $(".content").html(eval(arr.join("")));
      arr=[];
     }
