@@ -16,6 +16,6 @@
 .prettierignore
 .vscode/
 design/
-.README.md
-.style-guid.md
-.README-template.md
+README.md
+style-guid.md
+README-template.md
